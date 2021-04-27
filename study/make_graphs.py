@@ -10,9 +10,9 @@ def parse_command_line_arguments():
     parser.add_argument('graphs_file_name', metavar="graphs-file", type=str,
                         help="graphs definition file")
     parser.add_argument('-d', '--data-dir', type=str,
-                        help=f"directory where the data files are stored")
+                        help="directory where the data files are stored")
     parser.add_argument('-g', '--graph-name', type=str,
-                        help=f"name of graph to produce (default: produce all graphs)")
+                        help="name of graph to produce (default: produce all graphs)")
     args = parser.parse_args()
     return args
 
@@ -25,7 +25,7 @@ def select_graph(graphs, graph_name):
     for graph in graphs:
         if graph['graph_name'] == graph_name:
             return [graph]
-    sys.exit(f"Graph name {graph_name} not found")
+    sys.exit("Graph name {graph_name} not found")
 
 def produce_graph(graph, data_dir):
     figure = go.Figure()
