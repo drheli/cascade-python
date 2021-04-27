@@ -74,7 +74,7 @@ graphs-zero-handling:
 		--data-dir study/data/zero_handling
 
 install:
-	pip install -r requirements.txt
+	pip3 install -r requirements.txt
 
 lint:
 	pylint cascade cascade/tests
